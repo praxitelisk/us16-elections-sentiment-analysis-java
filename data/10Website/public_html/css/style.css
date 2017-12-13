@@ -1,0 +1,131 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color:#EEEEEE;
+}
+
+.heading {
+    background-color: #214275;
+}
+
+.heading img {
+    width: 300px;
+    height: 150px;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+
+.mainHead {
+    font-family: 'Ubuntu', sans-serif;
+    color: #F8FAEF;
+    margin: 55px;
+    float: right;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.navigation {
+    background-color: #193867;
+    border-radius: 0 0 10px 10px;
+}
+
+.navigation li a {
+    color: #F8FAEF;
+}
+
+.navigation li a:hover {
+    background-color: #337AB7;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #337AB7;
+}
+
+.dropdown-menu {
+    background-color: #193867;
+}
+
+.dropdown-menu > li > a:hover {
+    color:#fff;
+    background-color: #337AB7;
+}
+
+.main {
+    margin: 45 0;
+}
+
+.main img {
+    border-radius:10px;
+}
+
+.main #container {
+    padding:20 0;
+    border: 1px dotted;
+}
+
+.description {
+    margin: 40px 0;
+}
+
+.description .container {
+    color: #fff;
+    padding: 40px 10;
+    border-radius: 10px;
+    height: 200px;
+    background-color: #b3964f;
+}
+
+.description .container h3 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.chart {
+    width: 900px; 
+    height: 500px;
+}
+
+.entities {
+    height: 4100px;
+}
+
+.footer {
+    background-color: rgb(29, 27, 27);
+    padding:30px;
+    color:white;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer .container {
+    padding:20 0;
+    border: 1px dotted;
+}
+
+.footer .col-md-4 {
+    padding:0;
+}
+
+.footer ul {
+    padding:0;
+    list-style-type:none;
+}
+
+.footer li {
+    margin: 0 10px;
+    display:inline-block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer .copyright {
+    float:right;
+}
+
+.footer .copyright ul {
+    list-style-type:none;
+}
+
+.footer .copyright  li{
+    display:inline-block;
+}
+

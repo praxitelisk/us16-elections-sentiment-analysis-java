@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="lib/mallet/mallet-deps.jar"/>
+	<classpathentry kind="lib" path="lib/mallet/mallet.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/ejml-0.23.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/javax.json-api-1.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/javax.json.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/joda-time-2.9-sources.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/joda-time.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/jollyday-0.4.7-sources.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/jollyday.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/protobuf.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/stanford-corenlp-3.6.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/stanford-corenlp-3.6.0-models.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/stanford-corenlp-3.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/stanford-corenlp-3.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/xom-1.2.10-src.jar"/>
+	<classpathentry kind="lib" path="lib/stanfordNLP/xom.jar"/>
+	<classpathentry kind="lib" path="lib/mongodb/mongo-java-driver-2.13.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/mongodb/mongo-java-driver-2.13.3-sources.jar"/>
+	<classpathentry kind="lib" path="lib/mongodb/mongo-java-driver-3.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j/twitter4j-async-4.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j/twitter4j-core-4.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j/twitter4j-examples-4.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j/twitter4j-media-support-4.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/twitter4j/twitter4j-stream-4.0.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
