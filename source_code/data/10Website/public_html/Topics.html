@@ -1,0 +1,248 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>US Election 16 Tweet Analysis</title>
+        <script src="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script src="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        <script src="js/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist\js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/css/bootstrap.css">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>	
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="css/backToTop.css"> <!-- Gem style -->
+        <script src="js/backToTop/modernizr.js"></script> <!-- Modernizr -->
+
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['table', 'corechart']});
+
+            google.charts.setOnLoadCallback(drawTable);
+            function drawTable() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Period');
+                data.addColumn('number', 'Topic');
+                data.addColumn('string', 'Word-1');
+                data.addColumn('string', 'Word-2');
+                data.addColumn('string', 'Word-3');
+                data.addColumn('string', 'Word-4');
+                data.addColumn('string', 'Word-5');
+                data.addColumn('string', 'Word-6');
+                data.addColumn('string', 'Word-7');
+                data.addColumn('string', 'Word-8');
+                data.addColumn('string', 'Word-9');
+                data.addColumn('string', 'Word-10');
+                data.addRows([
+                    ['24/5 4-6', {v: 1}, 'debate', 'poll', 'primary', 'california', 'surprise', 'disappointed', 'train', 'feelthebern', 'foxnews', 'secretary'],
+                    ['24/5 6-8', {v: 2}, 'debate', 'surprise', 'primary', 'disappointed', 'secretary', 'largest', 'unwillingness', 'isis', 'obama', 'vote'],
+                    ['24/5 8-10', {v: 3}, 'vote', 'time', 'stop', 'unite', 'america', 'divide', 'win', 'veteran', 'military', 'maga'],
+                    ['24/5 10-12', {v: 4}, 'debate', 'vote', 'feelthebern', 'poll', 'primary', 'california', 'caprimary', 'win', 'lrb', 'rally'],
+                    ['24/5 12-14', {v: 5}, 'time', 'stop', 'vote', 'america', 'unite', 'divide', 'poll', 'maga', 'support', 'makeamericagreatagain'],
+                    ['24/5 14-16', {v: 6}, 'debate', 'feelthebern', 'poll', 'vote', 'california', 'win', 'morningjoe', 'lead', 'crooked', 'point'],
+                    ['24/5 14-16', {v: 7}, 'time', 'vote', 'stop', 'train', 'unite', 'america', 'country', 'maga', 'divide', 'woman'],
+                    ['24/5 16-18', {v: 8}, 'tax', 'time', 'lie', 'stop', 'edklein', 'money', 'return', 'crooked', 'release', 'america'],
+                    ['24/5 18-20', {v: 9}, 'vote', 'debate', 'theview', 'win', 'feelthebern', 'primary', 'poll', 'social', 'campaign', 'party'],
+                    ['24/5 20-22', {v: 10}, 'bill', 'woman', 'america', 'president', 'tax', 'lie', 'time', 'stop', 'support', 'vote'],
+                    ['24/5 22-0', {v: 11}, 'poll', 'president', 'americans', 'raise', 'fight', 'america', 'profit', 'income', 'vote', 'train'],
+                    ['25/5 0-2', {v: 12}, 'woman', 'poll', 'debate', 'vote', 'nytime', 'bill', 'dailymail', 'lie', 'california', 'win'],
+                    ['25/5 2-4', {v: 13}, 'woman', 'lie', 'vote', 'support', 'work', 'crooked', 'bill', 'america', 'vet', 'give'],
+                    ['25/5 4-6', {v: 14}, 'rally', 'supporter', 'cnn', 'albuquerque', 'foxnews', 'vote', 'america', 'lrb', 'country', 'bill'],
+                    ['25/5 6-8', {v: 15}, 'president', 'million', 'americans', 'maga', 'vote', 'lie', 'america', 'lose', 'money', 'home'],
+                    ['25/5 8-10', {v: 16}, 'buiidthewall', 'high', 'energy', 'cnn', 'elizabethforma', 'americans', 'rally', 'mexico', 'flag', 'president'],
+                    ['25/5 10-12', {v: 17}, 'train', 'million', 'stop', 'makeamericagreatagain', 'rally', 'oasisupernova', 'high', 'mexico', 'buiidthewall', 'follower'],
+                    ['25/5 12-14', {v: 18}, 'morningjoe', 'elizabethforma', 'high', 'buiidthewall', 'lie', 'energy', 'rally', 'time', 'vote', 'money'],
+                    ['25/5 14-16', {v: 19}, 'imwithher', 'gop', 'dem', 'dropout', 'loveshate', 'hurt', 'republicans', 'moms', 'rally', 'feelthebern'],
+                    ['25/5 16-18', {v: 20}, 'email', 'state', 'break', 'fault', 'audit', 'news', 'statedept', 'imwithher', 'watch', 'dept'],
+                    ['25/5 18-20', {v: 21}, 'email', 'state', 'dept', 'break', 'audit', 'fault', 'makeamericagreatagain', 'report', 'rule', 'department'],
+                    ['25/5 20-22', {v: 22}, 'elizabethforma', 'fight', 'work', 'day', 'wall', 'family', 'thing', 'crooked', 'cost', 'america'],
+                    ['25/5 22-0', {v: 23}, 'elizabethforma', 'work', 'foxnews', 'vote', 'america', 'supporter', 'talk', 'email', 'call', 'fight'],
+                    ['26/5 0-2', {v: 24}, 'cnn', 'cut', 'reply', 'screenshot', 'elizabethforma', 'foxnews', 'vote', 'news', 'back', 'work'],
+                    ['26/5 2-4', {v: 25}, 'vote', 'elizabethforma', 'american', 'political', 'lie', 'article', 'wrollingstone', 'primary', 'america', 'president'],
+                    ['26/5 4-6', {v: 26}, 'wall', 'elizabethforma', 'country', 'family', 'money', 'vote', 'build', 'email', 'foxnews', 'lose'],
+                    ['26/5 6-8', {v: 27}, 'cnn', 'california', 'reply', 'cut', 'screenshot', 'feelthebern', 'real', 'price', 'reason', 'notmeus'],
+                    ['26/5 8-10', {v: 28}, 'imwithher', 'wall', 'loveshate', 'president', 'bankrupt', 'pres', 'vote', 'company', 'client', 'ofhairclub'],
+                    ['26/5 10-12', {v: 29}, 'california', 'tax', 'join', 'june', 'border', 'place', 'voting', 'americagreatagain', 'debate', 'feelthebern'],
+                    ['26/5 12-14', {v: 30}, 'call', 'debate', 'cnn', 'crazy', 'dopey', 'retaliate', 'reply', 'cut', 'screenshot', 'morningjoe'],
+                    ['26/5 14-16', {v: 31}, 'email', 'morningjoe', 'vote', 'state', 'president', 'america', 'potus', 'lie', 'elizabethforma', 'crooked'],
+                    ['26/5 16-18', {v: 32}, 'tax', 'california', 'join', 'vote', 'border', 'june', 'voting', 'place', 'americagreatagain', 'president'],
+                    ['26/5 18-20', {v: 33}, 'debate', 'vote', 'president', 'makeamericagreatagain', 'feelthebern', 'country', 'start', 'kid', 'hope', 'man'],
+                    ['26/5 20-22', {v: 34}, 'raise', 'start', 'lie', 'vote', 'email', 'win', 'family', 'president', 'american', 'msnbc'],
+                    ['26/5 22-0', {v: 35}, 'american', 'feelthebern', 'watch', 'rally', 'day', 'woman', 'campaign', 'ventura', 'vote', 'california'],
+                    ['27/5 0-2', {v: 36}, 'vote', 'cnn', 'president', 'maga', 'melania', 'email', 'america', 'greta', 'rally', 'watch'],
+                    ['27/5 2-4', {v: 37}, 'debate', 'agree', 'stadium', 'cnn', 'reply', 'lie', 'cut', 'screenshot', 'vote', 'america']
+                ]);
+
+                var table = new google.visualization.Table(document.getElementById('table_div'));
+
+                table.draw(data);
+            }
+
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['24/05/2016 – 27/05/2016', 'vote', 'feelthebern', 'debate', 'america', 'lie', 'president'],
+                    ['4:00-6:00', 0, 584, 2676, 0, 0, 0],
+                    ['6:00-8:00', 345, 0, 861, 0, 0, 0],
+                    ['8:00-10:00', 541, 0, 0, 272, 0, 0],
+                    ['10:00-12:00', 245, 177, 457, 0, 0, 0],
+                    ['12:00-14:00', 341, 0, 0, 300, 0, 0],
+                    ['14:00-16:00', 972, 460, 805, 301, 0, 0],
+                    ['16:00-18:00', 0, 0, 0, 447, 639, 0],
+                    ['18:00-20:00', 948, 492, 942, 0, 0, 0],
+                    ['20:00-22:00', 432, 0, 0, 567, 486, 504],
+                    ['22:00-0:00', 392, 0, 0, 447, 0, 731],
+                    ['0:00-2:00', 639, 0, 692, 0, 512, 0],
+                    ['2:00-4:00', 837, 0, 0, 637, 881, 0],
+                    ['4:00-6:00', 706, 0, 0, 685, 0, 0],
+                    ['6:00-8:00', 549, 0, 0, 535, 538, 948],
+                    ['8:00-10:00', 0, 0, 0, 0, 0, 231],
+                    ['10:00-12:00', 0, 0, 0, 0, 0, 0],
+                    ['12:00-14:00', 203, 0, 0, 0, 246, 0],
+                    ['14:00-16:00', 0, 324, 0, 0, 0, 0],
+                    ['16:00-18:00', 0, 0, 0, 0, 0, 0],
+                    ['18:00-20:00', 0, 0, 0, 0, 0, 0],
+                    ['20:00-22:00', 0, 0, 0, 650, 0, 0],
+                    ['22:00-0:00', 834, 0, 0, 780, 0, 0],
+                    ['0:00-2:00', 1021, 0, 0, 0, 0, 0],
+                    ['2:00-4:00', 2017, 0, 0, 683, 870, 673],
+                    ['4:00-6:00', 951, 0, 0, 0, 0, 0],
+                    ['6:00-8:00', 0, 1227, 0, 0, 0, 0],
+                    ['8:00-10:00', 302, 0, 0, 0, 0, 361],
+                    ['10:00-12:00', 0, 409, 639, 0, 0, 0],
+                    ['12:00-14:00', 0, 0, 1155, 0, 0, 0],
+                    ['14:00-16:00', 673, 0, 0, 464, 434, 475],
+                    ['16:00-18:00', 982, 0, 0, 0, 0, 676],
+                    ['18:00-20:00', 1191, 754, 4324, 0, 0, 815],
+                    ['20:00-22:00', 863, 0, 0, 0, 919, 778],
+                    ['22:00-0:00', 596, 992, 0, 0, 0, 0],
+                    ['0:00-2:00', 1379, 0, 0, 729, 0, 1071],
+                    ['2:00-4:00', 1012, 0, 3955, 764, 1213, 0]
+                ]);
+
+                var options = {
+                    title: 'Frequency of top 6 words from topics per 2-hour interval',
+//                    series: {
+//                        0: {color: '#ce2525'},
+//                        1: {color: '#5e5be5'},
+//                        2: {color: '#388c21'},
+//                    },
+                    lineWidth: 4,
+                    hAxis: {title: '24/05/16 4:00am - 27/05/16 4:00am, 2-Hour Interval EEST Time', titleTextStyle: {color: '#333'}},
+                    vAxis: {minValue: 0}
+                };
+                var chart = new google.visualization.AreaChart(document.getElementById('drawchart'));
+                chart.draw(data);
+            }
+
+
+
+        </script>
+
+    </head>
+    <body>
+        <div class="heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"><a href="https://en.wikipedia.org/wiki/United_States_presidential_election,_2016" target="_blank"><img alt="images\election-2016.jpg" src="images\election-16.jpg"></a></div>
+                    <div class="col-md-10">
+                        <h1 class="mainHead">US Elections 2016 Tweets Analysis</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">Home</a></li>
+                    <!--                    <li class="active"><a href="#">Data</a></li>-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Descriptive Statistics <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Data.html#generalStatistics">General Statistics</a></li>
+                            <li><a href="Data.html#realDonaldTrumpStatistics">realDonaldTrump Statistics</a></li>
+                            <li><a href="Data.html#hillaryClintonStatistics">Hillary Clinton Statistics</a></li>
+                            <li><a href="Data.html#bernieSandersStatistics">Bernie Sanders Statistics</a></li>
+                            <li><a href="Data.html#corellationStatistics">Candidates Statistics</a></li>
+                            <li><a href="Data.html#entitiesStatistics">Entities Statistics</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#">Topics Detection</a></li>
+                    <li><a href="Tagging.html">Affective Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <h1 style="text-align:center">Major discussion topics regarding US 2016 elections by timeframe</h1>
+                <div class="accordion">
+                    <h4 id="doctorAccordion">Topics Detection</h4>
+                    <div>
+                        <h3> Major discussion topics by time interval, from 24/05/2016 4:00am to 27/05/2016 4:00am, EEST time</h3>
+                        <div class="container">
+                            <h3>Topics discovered and relevant keywords using two-hour time interval</h3>
+                            <div id="table_div" style="width: 1000px; height: 1350px;"></div>
+                            <br><br>
+                            <h3>Frequencies of top-6 words in discovered topics using two-hour time interval</h3>
+                            <div id="drawchart" style="width: 1050px; height: 500px;"></div>
+                            <br>
+                            <p>Results: Here it is presented the top occurred words that appeared in most topics per 2-hour interval. <br> The peak of all words is the word "debate" during the 3-day period analysis from 24/05 - 27/05.<br> The high frequency of this word is due to the fact that a discussion about a debate was risen between<br> Donald Trump and Bernie Sanders for California state during that particular time</p>
+                        </div>	
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <ul>
+                            <li>Team:</li><br>
+                            <li><a href="#">Kynigopoulos Georgios - kynigopg@csd.auth.gr</a></li>
+                            <li><a href="#">Athanasiadis Ioannis - aioannis@csd.auth.gr</a></li>
+                            <li><a href="#">Kouroupetroglou Praxitelis Nikolaos - pkouroupe@csd.auth.gr</a></li>
+                            <li><a href="#">Tzimas Rafail - tzimasr@csd.auth.gr</a></li>                        </ul>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <ul>
+
+                            <li class="copyright">Aristotle University</li><br>
+                            <li class="copyright">CSD Department Master Program</li><br>
+                            <li class="copyright">Internet Information management</li><br>
+                            <li class="copyright">US Elections 2016 Tweets Analysis</li><br>
+                            <li class="copyright">Professor - Instructor: <a target="_blank" href="http://oswinds.csd.auth.gr/old/people-2/faculty/dr-athena-vakali/">Vakali Athina</a> - avakali@csd.auth.gr</li><br>
+                            <li class="copyright">Teaching Assistant: Chatzakou Despoina - deppych@csd.auth.gr</li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(function () {
+            $(".accordion").accordion({
+                //active: false,
+                collapsible: true,
+                heightStyle: "content"
+            });
+            if (location.hash) {
+                var hash = window.location.hash;
+                var thash = hash.substring(hash.lastIndexOf('#'), hash.length);
+                thash = thash.substring(1, thash.length);
+                if (thash.indexOf("Doctor") > -1)
+                    $("#doctorAccordion").trigger('click');
+
+                else
+                    $("#nurseAccordion").trigger('click');
+                thash = $('#' + thash);
+                $(thash).trigger('click');
+            }
+        });
+    </script>
+    <a href="#0" class="cd-top">Top</a>
+    <script src="js/backToTop/main.js"></script> <!-- Gem jQuery -->
+</html>

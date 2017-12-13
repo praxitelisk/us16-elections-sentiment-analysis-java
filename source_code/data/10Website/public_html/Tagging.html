@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>US Election 16 Tweet Analysis</title>
+        <script src="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script src="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        <script src="js/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui-1.11.4-start-theme.custom/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+        <link rel="stylesheet" href="js/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/css/bootstrap.css">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>		
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="css/backToTop.css"> <!-- Gem style -->
+        <script src="js/backToTop/modernizr.js"></script> <!-- Modernizr -->
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load("current", {packages: ['corechart', 'bar', 'annotationchart']});
+
+            google.charts.setOnLoadCallback(drawBasic);
+
+            function drawBasic() {
+
+                var data = google.visualization.arrayToDataTable([
+                    ['Affection', 'Frequencies'],
+                    ['neutral', 812672],
+                    ['enthusiasm', 221586],
+                    ['joy', 39099],
+                    ['anger', 20742],
+                    ['sadness', 2867],
+                    ['anxiety', 2394],
+                    ['interested', 1831],
+                    ['calm', 47],
+                    ['disgust', 0],
+                    ['fear', 0],
+                    ['nervous', 0],
+                    ['rejection', 0],
+                    ['shame', 0],
+                    ['surprise', 0]
+                ]);
+
+                var options = {
+                    title: 'Predicted Sentiments 24/05/2016 4:00am - 27/05/2016 4:00am',
+                    chartArea: {width: '80%'},
+                    hAxis: {
+                        title: 'Predicted Sentiments',
+                        minValue: 0
+                    },
+                    vAxis: {
+                        title: 'Sentiments'
+                    }
+                };
+
+                var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+                chart.draw(data, options);
+            }
+
+
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Affection', 'Frequencies'],
+                    ['neutral', 812672],
+                    ['enthusiasm', 221586],
+                    ['joy', 39099],
+                    ['anger', 20742],
+                    ['sadness', 2867],
+                    ['anxiety', 2394],
+                    ['interested', 1831],
+                    ['calm', 47],
+                    ['disgust', 0],
+                    ['fear', 0],
+                    ['nervous', 0],
+                    ['rejection', 0],
+                    ['shame', 0],
+                    ['surprise', 0]
+                ]);
+
+                var options = {
+                    title: 'Predicted Sentiments',
+//                    legend: 'none',
+                    pieSliceText: 'label',
+                    slices: {
+                        1: {offset: 0.1},
+                        2: {offset: 0.1},
+                        3: {offset: 0.1},
+                        4: {offset: 0.1},
+                        5: {offset: 0.1},
+                        6: {offset: 0.1},
+                        7: {offset: 0.1},
+                        8: {offset: 0.1},
+                        9: {offset: 0.1},
+                        10: {offset: 0.1},
+                        11: {offset: 0.1},
+                        12: {offset: 0.1},
+                        13: {offset: 0.1},
+                        14: {offset: 0.1}
+                    },
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+
+            google.charts.setOnLoadCallback(annotationChart);
+            function annotationChart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('date', 'Date');
+                data.addColumn('number', 'Enthusiam');
+                data.addColumn('string', 'Enthusiam Sentiment');
+                data.addColumn('number', 'Anger');
+                data.addColumn('string', 'Anger Sentiment');
+                data.addColumn('number', 'Joy');
+                data.addColumn('string', 'Joy Sentiment');
+                data.addColumn('number', 'Sadness');
+                data.addColumn('string', 'Sadness Sentiment');
+                 data.addColumn('number', 'Anxiety');
+                data.addColumn('string', 'Anxiety Sentiment');
+                data.addRows([
+                    [new Date('24 May 2016 4:00:00'), 0, undefined,
+                        0, undefined,
+                        0, undefined,
+                        0, undefined,
+                        0, undefined],
+                    [new Date('25 May 2016 4:00:00'), 59981, 'Enthusiam Sentiment Predicted',
+                        6790, 'Anger Sentiment Predicted',
+                        5285, 'Joy Sentiment Predicted',
+                        1219, 'Sadness Sentiment Predicted',
+                        721, 'Anxiety Sentiment Predicted'],
+                    [new Date('26 May 2016 4:00:00'), 75651, 'Enthusiam Sentiment Predicted',
+                        13013, 'Anger Sentiment Predicted',
+                        7451, 'Joy Sentiment Predicted',
+                        870, 'Sadness Sentiment Predicted',
+                        777, 'Anxiety Sentiment Predicted'],
+                    [new Date('27 May 2016 4:00:00'), 85954, 'Enthusiam Sentiment Predicted',
+                        20801, 'Anger Sentiment Predicted',
+                        6501, 'Joy Sentiment Predicted',
+                        896, 'Sadness Sentiment Predicted',
+                        778, 'Anxiety Sentiment Predicted']
+                ]);
+
+                var chart = new google.visualization.AnnotationChart(document.getElementById('annotation_chart'));
+
+                var options = {
+                    displayAnnotations: false,
+                    displayExactValues: true
+                };
+
+                chart.draw(data, options);
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"><a href="https://en.wikipedia.org/wiki/United_States_presidential_election,_2016" target="_blank"><img alt="images\election-2016.jpg" src="images\election-16.jpg"></a></div>
+                    <div class="col-md-10">
+                        <h1 class="mainHead">US Elections 2016 Tweets Analysis</h1> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li><a href="index.html">Home</a></li>
+                    <!--                    <li class="active"><a href="#">Data</a></li>-->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Descriptive Statistics <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Data.html#generalStatistics">General Statistics</a></li>
+                            <li><a href="Data.html#realDonaldTrumpStatistics">realDonaldTrump Statistics</a></li>
+                            <li><a href="Data.html#hillaryClintonStatistics">Hillary Clinton Statistics</a></li>
+                            <li><a href="Data.html#sandersStatistics">Bernie Sanders Statistics</a></li>
+                            <li><a href="Data.html#corellationStatistics">Candidates Statistics</a></li>
+                            <li><a href="Data.html#entitiesStatistics">Entities Statistics</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Topics.html">Topics Detection</a></li>
+                    <li class="active"><a href="#">Affective Analysis</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <h1 style="text-align:center">Affective analysis of US election-related tweets</h1>
+                <div class="accordion">
+                    <h1 id="patientsAccordion">Affective analysis of US election-related tweets</h1>
+                    <div>
+                        <h3>Classification of US election-related tweets to emotion categories</h3>
+                        <div class="container">
+                            <h4>Classification of US election-related tweets to emotion categories (bar chart)</h4>
+                            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                            <h4>Classification of US election-related tweets to emotion categories (pie chart)</h4>
+                            <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+                            <h4> Time-based comparison of top-5 emotions in US election-related tweets</h4>
+                            <div id="annotation_chart" style="width: 900px; height: 550px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <ul>
+                            <li>Team:</li><br>
+                            <li><a href="#">Kynigopoulos Georgios - kynigopg@csd.auth.gr</a></li>
+                            <li><a href="#">Athanasiadis Ioannis - aioannis@csd.auth.gr</a></li>
+                            <li><a href="#">Kouroupetroglou Praxitelis Nikolaos - pkouroupe@csd.auth.gr</a></li>
+                            <li><a href="#">Tzimas Rafail - tzimasr@csd.auth.gr</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <ul>
+                            <li class="copyright">Aristotle University</li><br>
+                            <li class="copyright">CSD Department Master Program</li><br>
+                            <li class="copyright">Internet Information management</li><br>
+                            <li class="copyright">US Election 2016 Tweets Analysis</li><br>
+                            <li class="copyright">Professor - Instructor: <a target="_blank" href="http://oswinds.csd.auth.gr/old/people-2/faculty/dr-athena-vakali/">Vakali Athina</a> - avakali@csd.auth.gr </li><br>
+                            <li class="copyright">Teaching Assistant: Chatzakou Despoina - deppych@csd.auth.gr</li><br>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $(".accordion").accordion({
+                    //active: false,
+                    collapsible: true,
+                    heightStyle: "content"
+                });
+                if (location.hash) {
+                    var hash = window.location.hash;
+                    var thash = hash.substring(hash.lastIndexOf('#'), hash.length);
+                    thash = thash.substring(1, thash.length);
+                    $("#patientsAccordion").trigger('click');
+                    thash = $('#' + thash);
+                    $(thash).trigger('click');
+                }
+            });
+        </script>
+        <a href="#0" class="cd-top">Top</a>
+        <script src="js/backToTop/main.js"></script> <!-- Gem jQuery -->
+    </body>
+</html>
